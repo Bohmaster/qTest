@@ -1,0 +1,23 @@
+<div class="row" ng-show="currentUser.token">
+	<div class="col-md-4 main-block">
+	    <h1>Thoughts</h1>
+	    <div class="thing" ng-repeat="t in thoughts">
+	    	<a ui-sref="app.thoughts.detail({id: t.id})">{{ t.description }}</a>
+	    </div>
+	    <button type="button" class="btn btn-default" ng-click="modalThought()">Add</button>
+  </div>
+	<div class="col-md-4 main-block">
+      <h1>Groups</h1>
+      <div class="thing" ng-repeat="g in groups">
+          <a ui-sref="app.groups.detail({id: g.id})">{{ g.description }}</a>
+      </div>
+      <button type="button" class="btn btn-default" ng-click="modalGroup()">Add</button>
+	</div>
+	<div class="col-md-4 main-block">
+		<h1>Proyects</h1>
+    <div class="thing">
+    <a ui-sref="app.groups.detail({id: g.id})">Masa Crítica</a>
+  </div>
+  <button type="button" class="btn btn-default" ng-click="modalGroup()">Add</button>
+	</div>
+</div>

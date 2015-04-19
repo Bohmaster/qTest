@@ -1,0 +1,9 @@
+[
+  {
+    "accessType": "EXECUTE",
+    "principalType": "ROLE",
+    "principalId": "$everyone",
+    "permission": "ALLOW",
+    "property": "find"
+  }
+]

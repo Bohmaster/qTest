@@ -1,0 +1,30 @@
+{
+  "name": "Group",
+  "plural": "Groups",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "operator": {
+      "type": "belongsTo",
+      "model": "Operator",
+      "foreignKey": ""
+    },
+    "operators": {
+      "type": "hasAndBelongsToMany",
+      "model": "Operator",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

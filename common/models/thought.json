@@ -1,0 +1,26 @@
+{
+  "name": "Thought",
+  "plural": "Thoughts",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": ""
+    },
+    "operator": {
+      "type": "belongsTo",
+      "model": "Operator",
+      "foreignKey": "operatorId"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

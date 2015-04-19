@@ -1,0 +1,13 @@
+<h3>{{ group.name }}</h3>
+<h4>{{ group.description }}</h4>
+<h5>{{ group.operator }}</h5>
+<h5>Owner:</h5>
+<div class="thing">
+  {{ operator.username }}
+</div>
+<h5>Members:</h5>
+<div class="thing" ng-repeat="o in operators">
+  {{ o.username }}<button type="button" class="btn btn-danger"
+                     ng-click="deleteMember(o)">Borrar miembro</button>
+</div>
+<button type="button" class="btn btn-default" ng-click="modalMember()">Add member</button>

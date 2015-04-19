@@ -1,0 +1,46 @@
+/*	Custom styles */
+
+body {
+	background: #3C2851;
+}
+
+.navbar {
+	background: black !important;
+}
+
+.navbar-brand {
+	color: white !important;
+  font-size: 25px;
+}
+
+.alt-wrapper {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-top: 0px;
+  color: white;
+}
+
+.main-block {
+	position: relative;
+	color: white;
+	text-align: center;
+}
+
+/* Components */
+
+#operator {
+	position: relative;
+	height: 100%;
+	width: auto;
+	color: red;
+	border-left: 1px solid white;
+	float: left;
+	padding: 5px;
+	padding-top: 7px;
+}
+
+.thing {
+  position: relative;
+  padding-bottom: 10px;
+}
