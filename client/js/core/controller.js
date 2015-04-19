@@ -2,6 +2,7 @@ angular
 	.module('quantum')
 	.controller('MainController', function($rootScope, $scope, Operator, Thought, Group, $modal) {
 		$scope.thoughts = [];
+    $scope.ownedGroups = [];
     $scope.groups = [];
 
     loadThoughts();
@@ -9,7 +10,9 @@ angular
 
     function loadThoughts () {
       Thought.find({
-        filter: {operatorId: $rootScope.currentUser.id}
+        filter: {where: {
+          operatorId: $rootScope.currentUser.id}
+        }
       }, function(data) {
         $scope.thoughts = data;
       }, function(err) {
@@ -19,13 +22,25 @@ angular
 
     function loadGroups () {
       Group.find({
-        filter: {operatorId: $rootScope.currentUser.id}
-      }, function(data) {
+        filter: {where: {
+          operatorId: $rootScope.currentUser.id
+        }}
+        }, function(data) {
         console.log(data);
-        $scope.groups = data;
+        $scope.ownedGroups = data;
       }, function(err) {
         console.log(err);
-      })
+      });
+
+      Operator.groups({
+        id: $rootScope.currentUser.id
+        }, null,
+           function(data) {
+            console.log(data);
+             $scope.groups = data;
+        }, function(err) {
+            console.log(err);
+        });
     }
 
     $scope.modalThought = function() {

@@ -11,6 +11,9 @@
       <div class="thing" ng-repeat="g in groups">
           <a ui-sref="app.groups.detail({id: g.id})">{{ g.description }}</a>
       </div>
+    <div class="thing" ng-repeat="g in ownedGroups">
+      <a ui-sref="app.groups.detail({id: g.id})">{{ g.description }}</a>
+    </div>
       <button type="button" class="btn btn-default" ng-click="modalGroup()">Add</button>
 	</div>
 	<div class="col-md-4 main-block">
