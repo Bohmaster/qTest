@@ -1,9 +1,9 @@
 angular
   .module('quantum')
-  .controller('MembersController', function($rootScope, $scope, $modal, group, operator, operators, Group, Operator) {
+  .controller('MembersController', function($rootScope, $scope, $modal, group, owner, operators, Group, Operator) {
       $scope.group = group;
       $scope.operators = operators;
-      $scope.operator = operator;
+      $scope.owner = owner;
 
       function loadOperators() {
         Group.operators({id: group.id},

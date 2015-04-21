@@ -1,7 +1,7 @@
 /*	Custom styles */
 
 body {
-	background: #3C2851;
+	background: white;
 }
 
 .navbar {
@@ -44,3 +44,6 @@ body {
   position: relative;
   padding-bottom: 10px;
 }
+
+
+

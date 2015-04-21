@@ -22,7 +22,7 @@ angular
               }
             );
           },
-          operator: function(Group, $stateParams) {
+          owner: function(Group, $stateParams) {
             return Group.operator({id: $stateParams.id},
               function(data) {
                 console.log(data);
@@ -41,9 +41,6 @@ angular
                 console.log(err);
               }
             )
-          },
-          id: function($stateParams) {
-            return $stateParams.id
           }
         },
         controller: "MembersController"
